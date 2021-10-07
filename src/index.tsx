@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux'
+import { createStore } from 'redux';
+import rootReducer from './Reducer/rootReducer';
+
+const initialState:any={
+  userDetais:{},
+  interViews:[]
+}
+console.log("ist",initialState)
+
+const store= createStore(rootReducer,initialState)
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

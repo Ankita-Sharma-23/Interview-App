@@ -1,0 +1,52 @@
+body{
+    border:10px solid black;
+    
+}
+.header{
+    position: sticky;
+    top: 0;
+    min-height: 80px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    /* background-image: linear-gradient(rgb(101, 101, 161),rgb(112, 112, 150),rgb(121, 121, 148),rgb(126, 126, 167),rgb(77, 77, 156),rgb(97, 97, 158)) */
+    border: black 10px solid;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.login{
+    color:white;
+}
+.reset{
+    color: white;
+}
+.head{
+    color: white;
+    text-shadow: 5px 8px 8px rgb(204, 151, 151);
+    text-shadow: 50px;
+}
+.login{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding-left: 10px;
+}
+.script{
+    font-size: small;
+}
+.home{
+    float: left;
+    display: block;
+}
+.headerbar{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 40px;
+}
+    
