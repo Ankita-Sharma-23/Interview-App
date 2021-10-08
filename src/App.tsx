@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import Login from "./Components/Login";
+import Interviews from "./Components/Interviews";
+import Form from "./Components/Form"
+import { Home } from "./Home";
+import './Style/form.css';
+import './Style/header.css';
+import './Style/login.css';
+import HeaderBar from "./Header/HeaderBar";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <HeaderBar/>
+      <Switch>
+      <Route exact path="/Home" component={Home}/>
+        <Route exact path="/Login" component={Login}/>
+        <Route exact path="/Form" component={ Form }/>
+        <Route exact path="/Interviews" component={Interviews}/>
+      </Switch>  
+      </BrowserRouter>
+    
     </div>
   );
 }
 
 export default App;
+ 
