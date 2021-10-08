@@ -1,0 +1,22 @@
+.loginform{
+    margin-top:50px;
+    text-align: center;
+    padding: 50px;
+
+
+}
+  .mx-1{
+      background-color: rgb(199, 84, 84);
+      width: 180px;
+      height: 40px;
+  }
+  .mx-2{
+    background-color:rgb(78, 139, 78);
+    width: 180px;
+    height: 40px;
+}
+.doneediting{
+    background-color: blueviolet;
+    width: 180px;
+    height: 40px;
+}
