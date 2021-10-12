@@ -17,10 +17,37 @@ const Interviews = (props: {
   const [editMode, setEditMode] = useState<boolean>(false);
   const [editIndex, setEditIndex] = useState<number>(-1);
   const [dropDown,setDropDown]=useState<string>('')
+  const[selected,setSelected]= useState<any>("")
+
+
 
   const changeSelectOptionHandler = (event: { target: { value: any; }; }) => {
-    setDropDown(event.target.value);
+   
+    setSelected(event.target.value);
   };
+
+
+  const handleChange=(e: { target: { value: any; }; })=>{
+    setDropDown(e.target.value);
+  }
+
+ 
+
+  const frontend = ["Mr.Sumit","Mr.Rohit","Mr.Sumit","Mr. XYZ"];
+  const fullstack= ["X", "Y", "Z", "H"];
+  const backend = ["A", "B", "C", "D"];
+
+  let type = null;
+  let options = null;
+
+  if (selected === "Front-End") {
+    type = frontend;
+  } else if (selected === "Back-End") {
+    type = fullstack;
+  } else if (selected === "Full-Stack") {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    type = backend;
+  }
 
 
   const deleteInterview = (removeIndex: any) => {
@@ -53,8 +80,18 @@ const Interviews = (props: {
     setDropDown(select);
   };
 
+  const onChecked=(index: any)=>{
+    const editData :any={
+      edit:{
+        Selected:!props.interviewList[index].Selected
+      },
+      editIndex:index
+    }
+    props.edit(editData) 
+  }
+
   return (
-    <div className="container">
+    <div className="container2">
       {editMode && (
         <div>
           <br />
@@ -91,18 +128,28 @@ const Interviews = (props: {
             <option>Full-Stack</option>
           </select>
         </div>
+        <div>
+          <select defaultValue={dropDown} onChange={handleChange} className="dropdownClass1">
+            {
+
+              options
+            }
+          </select>
+        </div>
+        
         </div>
       )}
-      <h2>All the Interviews can be viewed here.</h2>
+      <h2 className="InterviewHeading">All the Interviews can be viewed here.</h2>
 
       {props.interviewList.map((item, index) => {
         return (
           <div
             key={index}
-            className={item.completed ? "completed boxstyle" : "boxstyle"}
+            className={item.Selected ? "completed boxstyle" : "boxstyle"}
           >
             <Card bg="dark">
               <Card.Body>
+                <Card.Title><input type="checkbox" onClick={()=>{onChecked(index)}}/></Card.Title>
                 <Card.Text>
                   <div>Interview:{item.interview}</div>
                   <br></br>

@@ -10,26 +10,26 @@ const Form = (props: { addInterview: any; interviewList: any }) => {
   const [select, setSelect] = useState<any>("");
   const[selected,setSelected]= useState<any>("")
 
-  const changeSelectOptionHandler = (event: { target: { value: any; }; }) => {
-    setSelect(event.target.value);
+  const changeSelectOptionHandler = (event: { target: { value: any; }; }) => {   
+    setSelected(event.target.value)
   };
 
   const handleChange=(e: { target: { value: any; }; })=>{
-    setSelected(e.target.value)
+    setSelect(e.target.value);
   }
 
-  const frontend = ["Mr.Sumit","Mr.Rohit","Mr.XXX"];
+  const frontend = ["Mr.Sumit","Mr.Rohit","Mr.Sumit","Mr. Sumit"];
   const fullstack= ["X", "Y", "Z", "H"];
   const backend = ["A", "B", "C", "D"];
 
   let type = null;
   let options = null;
 
-  if (select === "Front-End") {
+  if (selected === "Front-End") {
     type = frontend;
-  } else if (select === "Back-End") {
+  } else if (selected === "Back-End") {
     type = fullstack;
-  } else if (select === "Full-Stack") {
+  } else if (selected === "Full-Stack") {
     type = backend;
   }
 
@@ -60,7 +60,7 @@ const Form = (props: { addInterview: any; interviewList: any }) => {
     options = type.map((el) => <option key={el}>{el}</option>);
   }
   return (
-    <div className="container">
+    <div className="container1">
       <br></br>
       <br></br>
       <br></br>
@@ -93,6 +93,7 @@ const Form = (props: { addInterview: any; interviewList: any }) => {
           required
         />
       </InputGroup>
+      <div className="tag">
         <div className="dropDown">
           <select onChange={changeSelectOptionHandler} className="dropdownClass">
             <option>Choose...</option>
@@ -101,24 +102,27 @@ const Form = (props: { addInterview: any; interviewList: any }) => {
             <option>Full-Stack</option>
           </select>
         </div>
+        </div>
         <div>
-          <select onChange={handleChange} className="dropdownClass">
+          <select onChange={handleChange} className="dropdownClass1">
             {
 
               options
             }
           </select>
         </div>
+        
       <br></br>
       <br></br>
 
       <Button
         variant="primary" 
         type="submit"
+        className="buttonLogin"
         onClick={() => {
           addInterviews();
         }}
-        style={{ backgroundColor: "green", width: "150px", height: "40px" }}
+        
       >
         ADD
       </Button>
@@ -150,7 +154,7 @@ const Form = (props: { addInterview: any; interviewList: any }) => {
             | undefined;
         }) => { 
           return (
-            <div className="boxstyle">
+            <div className="boxstyle1">
               <Card bg="dark">
                 <Card.Body>
                   <Card.Title>{item.interview}</Card.Title>

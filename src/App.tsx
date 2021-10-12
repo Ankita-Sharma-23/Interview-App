@@ -7,6 +7,7 @@ import './Style/form.css';
 import './Style/header.css';
 import './Style/login.css';
 import HeaderBar from "./Header/HeaderBar";
+import ViewInterview from './Components/ViewInterview';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/Login" component={Login}/>
         <Route exact path="/Form" component={ Form }/>
         <Route exact path="/Interviews" component={Interviews}/>
+        <Route exact path="/ViewInterview" component={ViewInterview}/>
       </Switch>  
       </BrowserRouter>
     

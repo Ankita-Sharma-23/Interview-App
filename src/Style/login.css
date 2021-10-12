@@ -14,9 +14,20 @@
     background-color:rgb(78, 139, 78);
     width: 180px;
     height: 40px;
+  
 }
 .doneediting{
     background-color: blueviolet;
     width: 180px;
     height: 40px;
+}
+.buttonLogin{
+    background-color: #bb4521;
+    border: none;
+    color: white;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+     width: 120px; 
+     height: 40px;
 }

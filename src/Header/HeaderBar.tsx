@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiTwotoneHome } from "react-icons/ai";
 import { TeamOutlined, CheckOutlined } from "@ant-design/icons";
-import { LoginOutlined, MenuOutlined, LogoutOutlined } from "@ant-design/icons";
+import { LoginOutlined, MenuOutlined, LogoutOutlined,FundViewOutlined} from "@ant-design/icons";
 import { connect } from "react-redux";
 
 const HeaderBar = (props: any) => {
@@ -37,6 +37,12 @@ const HeaderBar = (props: any) => {
             <Link to="/Interviews" className="reset">
               <CheckOutlined />
               <p className="script">Interviews</p>
+            </Link>
+          </div>
+          <div>
+            <Link to="/ViewInterview" className="reset">
+            <FundViewOutlined/>
+              <p className="script"> View Interviews</p>
             </Link>
           </div>
           <div>

@@ -59,8 +59,18 @@
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: 15px;
-    background-color: grey;
+    background-color: #3c6382;
     
+  }
+  .boxstyle1{
+    border: 2px solid rgb(7, 7, 7);
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: 15px;
+    background-color: white;
+
   }
   
   .App-link {
@@ -79,12 +89,18 @@
   }
   .dropdownClass{
     display: block;
-    width: 86%;
+    width: 75%;
     margin: auto;
     padding: 13px 10px;
 
   }
+  .dropdownClass1{
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding: 13px 10px;
 
+  }
   .loginScreen{
     font-family: sans-serif;
     max-width: 500px;
@@ -104,4 +120,39 @@
     margin: 50px auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 50px 10px;
+    background-color: rgb(162, 175, 201);
+  }
+  .container{
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 50px 10px;
+  }
+  .container1{
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px 10px;
+    background-color: #778ca3;
+  }
+  .InterviewHeading{
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 50px 10px;
+    background-color: rgb(167, 185, 240);
+  }
+  .selectoption{
+
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding: 13px 10px;
+  }
+  .InterviewHeading2{
+    max-width: 600px;
+    margin: 0px auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px 10px;
+    background-color: rgb(167, 185, 240);
   }
